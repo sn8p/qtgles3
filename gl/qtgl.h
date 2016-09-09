@@ -2,7 +2,7 @@
  * Copyright (c) 2016 mr.sn8p@gmail.com
  *
  * Qt OpenGL ES 3.0
- * 
+ *
  * Translates global OpenGL ES function calls to the QOpenGLExtraFunctions calls.
  * Useful for the existing code with global OpenGL calls.
  *
@@ -12,11 +12,11 @@
 
 #include <QOpenGLExtraFunctions>
 
-/*
- * QOpenGLFunctions
- */
+ /*
+  * QOpenGLFunctions
+  */
 
- // GLES2 + OpenGL1 common subset
+  // GLES2 + OpenGL1 common subset
 #define glBindTexture(target, texture) QOpenGLContext::currentContext()->extraFunctions()->glBindTexture(target, texture)
 #define glBlendFunc(sfactor, dfactor) QOpenGLContext::currentContext()->extraFunctions()->glBlendFunc(sfactor, dfactor)
 #define glClear(mask) QOpenGLContext::currentContext()->extraFunctions()->glClear(mask)
